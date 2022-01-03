@@ -120,7 +120,7 @@ func TestAdjustProfileImage(t *testing.T) {
 	assert.True(t, adjusted.Len() > 0)
 	assert.NotEqual(t, testjpg, adjusted)
 
-	// default image should require adjustement
+	// default image should require adjustment
 	user := th.BasicUser
 	image, err := th.App.GetDefaultProfileImage(user)
 	require.Nil(t, err)
