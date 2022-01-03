@@ -1418,7 +1418,7 @@ func TestParseSearchParams(t *testing.T) {
 			},
 		},
 		{
-			Name:  "input is a wilrdcar with a *, should result in one term with a *",
+			Name:  "input is a wildcard with a *, should result in one term with a *",
 			Input: "wildcar*",
 			Output: []*SearchParams{
 				{
