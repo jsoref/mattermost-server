@@ -183,7 +183,7 @@ func TestSendMailWithEmbeddedFilesUsingConfig(t *testing.T) {
 			require.NoError(t, err, "Could not get message from mailbox")
 			require.Contains(t, emailBody, resultsEmail.Body.Text, "Wrong received message %s", resultsEmail.Body.Text)
 			// Usign the message size because the inbucket API doesn't return embedded attachments through the API
-			require.Greater(t, resultsEmail.Size, 1500, "the file size should be more because the embedded attachemtns")
+			require.Greater(t, resultsEmail.Size, 1500, "the file size should be more because the embedded attachments")
 		}
 	}
 }
