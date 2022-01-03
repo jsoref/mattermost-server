@@ -354,7 +354,7 @@ func getInvoicesForSubscription(c *Context, w http.ResponseWriter, r *http.Reque
 
 func getSubscriptionInvoicePDF(c *Context, w http.ResponseWriter, r *http.Request) {
 	if c.App.Srv().License() == nil || !*c.App.Srv().License().Features.Cloud {
-		c.Err = model.NewAppError("Api4.getSuscriptionInvoicePDF", "api.cloud.license_error", nil, "", http.StatusNotImplemented)
+		c.Err = model.NewAppError("Api4.getSubscriptionInvoicePDF", "api.cloud.license_error", nil, "", http.StatusNotImplemented)
 		return
 	}
 
@@ -370,7 +370,7 @@ func getSubscriptionInvoicePDF(c *Context, w http.ResponseWriter, r *http.Reques
 
 	pdfData, filename, appErr := c.App.Cloud().GetInvoicePDF(c.AppContext.Session().UserId, c.Params.InvoiceId)
 	if appErr != nil {
-		c.Err = model.NewAppError("Api4.getSuscriptionInvoicePDF", "api.cloud.request_error", nil, appErr.Error(), http.StatusInternalServerError)
+		c.Err = model.NewAppError("Api4.getSubscriptionInvoicePDF", "api.cloud.request_error", nil, appErr.Error(), http.StatusInternalServerError)
 		return
 	}
 
