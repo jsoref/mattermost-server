@@ -245,7 +245,7 @@ func TestDatabaseStoreGet(t *testing.T) {
 	assert.True(t, cfg == cfg2, "Get() returned different configuration instances")
 }
 
-func TestDatabaseStoreGetEnivironmentOverrides(t *testing.T) {
+func TestDatabaseStoreGetEnvironmentOverrides(t *testing.T) {
 	t.Run("get override for a string variable", func(t *testing.T) {
 		_, tearDown := setupConfigDatabase(t, testConfig, nil)
 		defer tearDown()
