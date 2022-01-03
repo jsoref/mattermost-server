@@ -352,7 +352,7 @@ func (l *Logger) RedirectStdLog(level Level, fields ...Field) func() {
 // RemoveTargets safely removes one or more targets based on the filtering method.
 // `f` should return true to delete the target, false to keep it.
 // When removing a target, best effort is made to write any queued log records before
-// closing, with cxt determining how much time can be spent in total.
+// closing, with ctx determining how much time can be spent in total.
 // Note, keep the timeout short since this method blocks certain logging operations.
 func (l *Logger) RemoveTargets(ctx context.Context, f func(ti TargetInfo) bool) error {
 	return l.log.Logr().RemoveTargets(ctx, f)
