@@ -3089,7 +3089,7 @@
   },
   {
     "id": "ent.migration.migratetoldap.duplicate_field",
-    "translation": "Unable to migrate AD/LDAP users with specified field. Duplicate entry detected. Please remove all duplcates and try again."
+    "translation": "Unable to migrate AD/LDAP users with specified field. Duplicate entry detected. Please remove all duplicates and try again."
   },
   {
     "id": "ent.message_export.run_export.app_error",
@@ -3200,27 +3200,27 @@
     "translation": "Invalid AD/LDAP Admin Filter."
   },
   {
-    "id": "ent.ldap.syncronize.search_failure_size_exceeded.app_error",
+    "id": "ent.ldap.synchronize.search_failure_size_exceeded.app_error",
     "translation": "Size Limit Exceeded. Try checking your [max page size](https://docs.mattermost.com/deployment/sso-ldap.html#i-see-the-log-error-ldap-result-code-4-size-limit-exceeded)."
   },
   {
-    "id": "ent.ldap.syncronize.search_failure.app_error",
+    "id": "ent.ldap.synchronize.search_failure.app_error",
     "translation": "Failed to search users in AD/LDAP. Test if the Mattermost server can connect to your AD/LDAP server and try again."
   },
   {
-    "id": "ent.ldap.syncronize.populate_syncables",
+    "id": "ent.ldap.synchronize.populate_syncables",
     "translation": "error populating syncables"
   },
   {
-    "id": "ent.ldap.syncronize.get_all_groups.app_error",
+    "id": "ent.ldap.synchronize.get_all_groups.app_error",
     "translation": "error retrieving groups."
   },
   {
-    "id": "ent.ldap.syncronize.get_all.app_error",
+    "id": "ent.ldap.synchronize.get_all.app_error",
     "translation": "Unable to get all users using AD/LDAP."
   },
   {
-    "id": "ent.ldap.syncronize.delete_group_constained_memberships",
+    "id": "ent.ldap.synchronize.delete_group_constrained_memberships",
     "translation": "error deleting team or channel memberships"
   },
   {
@@ -4680,7 +4680,7 @@
     "translation": "Unable to get channel type counts."
   },
   {
-    "id": "app.bot.permenent_delete.bad_id",
+    "id": "app.bot.permanent_delete.bad_id",
     "translation": "Unable to delete the bot."
   },
   {
@@ -5517,7 +5517,7 @@
   },
   {
     "id": "api.templates.cloud_welcome_email.add_apps_sub_info",
-    "translation": "Streamline your work with tools like Github, Jira and Zoom. Explore all of the integrations we have on our"
+    "translation": "Streamline your work with tools like GitHub, Jira and Zoom. Explore all of the integrations we have on our"
   },
   {
     "id": "api.templates.cloud_welcome_email.add_apps_info",
@@ -5716,11 +5716,11 @@
     "translation": "The channels of the invite must be part of the team of the invite."
   },
   {
-    "id": "api.team.invate_guests_to_channels.license.error",
+    "id": "api.team.invite_guests_to_channels.license.error",
     "translation": "Your licence does not support guest accounts"
   },
   {
-    "id": "api.team.invate_guests_to_channels.disabled.error",
+    "id": "api.team.invite_guests_to_channels.disabled.error",
     "translation": "Guest accounts are disabled"
   },
   {
@@ -5824,15 +5824,15 @@
     "translation": "Outgoing webhooks have been disabled by the system admin."
   },
   {
-    "id": "api.oauth.singup_with_oauth.invalid_link.app_error",
+    "id": "api.oauth.signup_with_oauth.invalid_link.app_error",
     "translation": "The signup link does not appear to be valid."
   },
   {
-    "id": "api.oauth.singup_with_oauth.expired_link.app_error",
+    "id": "api.oauth.signup_with_oauth.expired_link.app_error",
     "translation": "The signup link has expired."
   },
   {
-    "id": "api.oauth.singup_with_oauth.disabled.app_error",
+    "id": "api.oauth.signup_with_oauth.disabled.app_error",
     "translation": "User sign-up is disabled."
   },
   {
@@ -6449,7 +6449,7 @@
   },
   {
     "id": "api.user.get_authorization_code.endpoint.app_error",
-    "translation": "Error retreiving endpoint from Discovery Document."
+    "translation": "Error retrieving endpoint from Discovery Document."
   },
   {
     "id": "api.user.email_to_oauth.not_available.app_error",

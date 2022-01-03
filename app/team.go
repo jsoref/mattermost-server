@@ -650,7 +650,7 @@ func (a *App) JoinUserToTeam(c *request.Context, team *model.Team, user *model.U
 	if err != nil {
 		var appErr *model.AppError
 		var conflictErr *store.ErrConflict
-		var limitExeededErr *store.ErrLimitExceeded
+		var limitExceededErr *store.ErrLimitExceeded
 		switch {
 		case errors.Is(err, teams.AcceptedDomainError):
 			return nil, model.NewAppError("JoinUserToTeam", "api.team.join_user_to_team.allowed_domains.app_error", nil, "", http.StatusBadRequest)
@@ -662,7 +662,7 @@ func (a *App) JoinUserToTeam(c *request.Context, team *model.Team, user *model.U
 			return nil, appErr
 		case errors.As(err, &conflictErr):
 			return nil, model.NewAppError("JoinUserToTeam", "app.team.join_user_to_team.save_member.conflict.app_error", nil, err.Error(), http.StatusBadRequest)
-		case errors.As(err, &limitExeededErr):
+		case errors.As(err, &limitExceededErr):
 			return nil, model.NewAppError("JoinUserToTeam", "app.team.join_user_to_team.save_member.max_accounts.app_error", nil, err.Error(), http.StatusBadRequest)
 		default: // last fallback in case it doesn't map to an existing app error.
 			return nil, model.NewAppError("JoinUserToTeam", "app.team.join_user_to_team.save_member.app_error", nil, err.Error(), http.StatusInternalServerError)
@@ -1738,16 +1738,16 @@ func (a *App) GetTeamIdFromQuery(query url.Values) (string, *model.AppError) {
 	if tokenID != "" {
 		token, err := a.Srv().Store.Token().GetByToken(tokenID)
 		if err != nil {
-			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.singup_with_oauth.invalid_link.app_error", nil, "", http.StatusBadRequest)
+			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.signup_with_oauth.invalid_link.app_error", nil, "", http.StatusBadRequest)
 		}
 
 		if token.Type != TokenTypeTeamInvitation && token.Type != TokenTypeGuestInvitation {
-			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.singup_with_oauth.invalid_link.app_error", nil, "", http.StatusBadRequest)
+			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.signup_with_oauth.invalid_link.app_error", nil, "", http.StatusBadRequest)
 		}
 
 		if model.GetMillis()-token.CreateAt >= InvitationExpiryTime {
 			a.DeleteToken(token)
-			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.singup_with_oauth.expired_link.app_error", nil, "", http.StatusBadRequest)
+			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.signup_with_oauth.expired_link.app_error", nil, "", http.StatusBadRequest)
 		}
 
 		tokenData := model.MapFromJSON(strings.NewReader(token.Extra))

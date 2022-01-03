@@ -45,7 +45,7 @@ func setupTestHelper(enterprise bool) *TestHelper {
 	var options []app.Option
 	options = append(options, app.ConfigStore(memoryStore))
 	options = append(options, app.StoreOverride(mainHelper.Store))
-	options = append(options, app.SkipPostInitializiation())
+	options = append(options, app.SkipPostInitialization())
 
 	testLogger, _ := mlog.NewLogger()
 	logCfg, _ := config.MloggerConfigFromLoggerConfig(&newConfig.LogSettings, nil, config.GetLogFileLocation)

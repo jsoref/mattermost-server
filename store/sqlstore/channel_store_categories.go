@@ -90,7 +90,7 @@ func (s SqlChannelStore) createInitialSidebarCategoriesT(transaction *gorp.Trans
 
 	if !hasCategoryOfType[model.SidebarCategoryChannels] {
 		if err := transaction.Insert(&model.SidebarCategory{
-			DisplayName: "Channels", // This will be retranslateed by the client into the user's locale
+			DisplayName: "Channels", // This will be retranslated by the client into the user's locale
 			Id:          channelsCategoryId,
 			UserId:      userId,
 			TeamId:      teamId,
@@ -104,7 +104,7 @@ func (s SqlChannelStore) createInitialSidebarCategoriesT(transaction *gorp.Trans
 
 	if !hasCategoryOfType[model.SidebarCategoryDirectMessages] {
 		if err := transaction.Insert(&model.SidebarCategory{
-			DisplayName: "Direct Messages", // This will be retranslateed by the client into the user's locale
+			DisplayName: "Direct Messages", // This will be retranslated by the client into the user's locale
 			Id:          directMessagesCategoryId,
 			UserId:      userId,
 			TeamId:      teamId,
@@ -674,7 +674,7 @@ func (s SqlChannelStore) UpdateSidebarCategories(userId, teamId string, categori
 				).ToSql()
 
 			if err2 != nil {
-				return nil, nil, errors.Wrap(err2, "update_sidebar_catetories_tosql")
+				return nil, nil, errors.Wrap(err2, "update_sidebar_categories_tosql")
 			}
 
 			if _, err = transaction.Exec(query, args...); err != nil {
@@ -1017,7 +1017,7 @@ func (s SqlChannelStore) DeleteSidebarCategory(categoryId string) error {
 		Delete("SidebarCategories").
 		Where(sq.Eq{"Id": categoryId}).ToSql()
 	if err != nil {
-		return errors.Wrap(err, "delete_sidebar_cateory_tosql")
+		return errors.Wrap(err, "delete_sidebar_category_tosql")
 	}
 	if _, err = transaction.Exec(query, args...); err != nil {
 		return errors.Wrap(err, "failed to delete SidebarCategory")
@@ -1028,7 +1028,7 @@ func (s SqlChannelStore) DeleteSidebarCategory(categoryId string) error {
 		Delete("SidebarChannels").
 		Where(sq.Eq{"CategoryId": categoryId}).ToSql()
 	if err != nil {
-		return errors.Wrap(err, "delete_sidebar_cateory_tosql")
+		return errors.Wrap(err, "delete_sidebar_category_tosql")
 	}
 	if _, err = transaction.Exec(query, args...); err != nil {
 		return errors.Wrap(err, "failed to delete SidebarChannel")

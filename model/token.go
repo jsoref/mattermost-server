@@ -9,7 +9,7 @@ import (
 
 const (
 	TokenSize          = 64
-	MaxTokenExipryTime = 1000 * 60 * 60 * 48 // 48 hour
+	MaxTokenExpiryTime = 1000 * 60 * 60 * 48 // 48 hour
 	TokenTypeOAuth     = "oauth"
 )
 
