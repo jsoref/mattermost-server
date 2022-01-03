@@ -4396,7 +4396,7 @@
     "translation": "Unable to delete the bot permanently."
   },
   {
-    "id": "app.bot.permenent_delete.bad_id",
+    "id": "app.bot.permanent_delete.bad_id",
     "translation": "Unable to delete the bot."
   },
   {

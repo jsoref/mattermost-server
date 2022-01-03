@@ -4680,7 +4680,7 @@
     "translation": "Unable to get channel type counts."
   },
   {
-    "id": "app.bot.permenent_delete.bad_id",
+    "id": "app.bot.permanent_delete.bad_id",
     "translation": "Unable to delete the bot."
   },
   {
