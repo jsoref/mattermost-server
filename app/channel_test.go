@@ -1047,7 +1047,7 @@ func TestGetPublicChannelsForTeam(t *testing.T) {
 		expectedChannels = append(expectedChannels, rchannel)
 	}
 
-	// Fetch public channels multipile times
+	// Fetch public channels multiple times
 	channelList, err := th.App.GetPublicChannelsForTeam(team.Id, 0, 5)
 	require.Nil(t, err)
 	channelList2, err := th.App.GetPublicChannelsForTeam(team.Id, 5, 5)
@@ -1080,7 +1080,7 @@ func TestGetPrivateChannelsForTeam(t *testing.T) {
 		expectedChannels = append(expectedChannels, rchannel)
 	}
 
-	// Fetch private channels multipile times
+	// Fetch private channels multiple times
 	channelList, err := th.App.GetPrivateChannelsForTeam(team.Id, 0, 5)
 	require.Nil(t, err)
 	channelList2, err := th.App.GetPrivateChannelsForTeam(team.Id, 5, 5)
