@@ -3220,7 +3220,7 @@
     "translation": "Unable to get all users using AD/LDAP."
   },
   {
-    "id": "ent.ldap.syncronize.delete_group_constained_memberships",
+    "id": "ent.ldap.syncronize.delete_group_constrained_memberships",
     "translation": "error deleting team or channel memberships"
   },
   {
