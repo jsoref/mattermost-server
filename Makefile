@@ -47,7 +47,7 @@ else
 endif
 BUILD_WEBAPP_DIR ?= ../mattermost-webapp
 BUILD_CLIENT = false
-BUILD_HASH_CLIENT = independant
+BUILD_HASH_CLIENT = independent
 ifneq ($(wildcard $(BUILD_WEBAPP_DIR)/.),)
 	ifeq ($(BUILD_CLIENT),true)
 		BUILD_CLIENT = true
