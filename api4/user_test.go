@@ -3466,7 +3466,7 @@ func TestSetDefaultProfileImage(t *testing.T) {
 
 	ruser, appErr := th.App.GetUser(user.Id)
 	require.Nil(t, appErr)
-	assert.Equal(t, int64(0), ruser.LastPictureUpdate, "Picture should have resetted to default")
+	assert.Equal(t, int64(0), ruser.LastPictureUpdate, "Picture should have reset to default")
 
 	info := &model.FileInfo{Path: "users/" + user.Id + "/profile.png"}
 	err = th.cleanupTestFile(info)
