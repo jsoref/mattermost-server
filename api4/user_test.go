@@ -5210,7 +5210,7 @@ func TestPromoteGuestToUser(t *testing.T) {
 		require.NoError(t, err)
 
 		defer require.Nil(t, th.App.DemoteUserToGuest(user))
-	}, "promete a guest to user")
+	}, "promote a guest to user")
 
 	t.Run("websocket update user event", func(t *testing.T) {
 		webSocketClient, err := th.CreateWebSocketClient()
