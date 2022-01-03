@@ -226,7 +226,7 @@ func TestSendMailUsingConfigAdvanced(t *testing.T) {
 	}
 
 	err = sendMailUsingConfigAdvanced(mail, cfg)
-	require.NoError(t, err, "Should connect to the STMP Server: %v", err)
+	require.NoError(t, err, "Should connect to the SMTP Server: %v", err)
 
 	//Check if the email was send to the right email address
 	var resultsMailbox JSONMessageHeaderInbucket
