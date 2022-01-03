@@ -1391,7 +1391,7 @@ func TestGetFirstLinkAndImages(t *testing.T) {
 		"markdown links (not returned)": {
 			Input: `this is a [our page](http://example.com) and [another page][]
 
-[another page]: http://www.exaple.com/another_page`,
+[another page]: http://www.example.com/another_page`,
 			ExpectedFirstLink: "",
 			ExpectedImages:    []string{},
 		},
