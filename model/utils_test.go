@@ -213,7 +213,7 @@ var hashtags = map[string]string{
 	"#?test":          "",
 	"#-test":          "",
 	"#yo_yo":          "#yo_yo",
-	"(#brakets)":      "#brakets",
+	"(#brackets)":     "#brackets",
 	")#stekarb(":      "#stekarb",
 	"<#less_than<":    "#less_than",
 	">#greater_than>": "#greater_than",
