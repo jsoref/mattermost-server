@@ -861,7 +861,7 @@ func TestDatabaseStoreLoad(t *testing.T) {
 		assert.Equal(t, "http://trailingslash", *ds.Get().ServiceSettings.SiteURL)
 	})
 
-	t.Run("listeners notifed on change", func(t *testing.T) {
+	t.Run("listeners notified on change", func(t *testing.T) {
 		_, tearDown := setupConfigDatabase(t, emptyConfig, nil)
 		defer tearDown()
 

@@ -863,7 +863,7 @@ func TestFileStoreLoad(t *testing.T) {
 		assert.Equal(t, "en", *fs.Get().LocalizationSettings.DefaultClientLocale)
 	})
 
-	t.Run("listeners notifed", func(t *testing.T) {
+	t.Run("listeners notified", func(t *testing.T) {
 		path, tearDown := setupConfigFile(t, emptyConfig)
 		defer tearDown()
 
