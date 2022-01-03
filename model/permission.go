@@ -1093,20 +1093,20 @@ func initializePermissions() {
 	}
 	PermissionReadJobs = &Permission{
 		"read_jobs",
-		"authentication.permisssions.read_jobs.name",
-		"authentication.permisssions.read_jobs.description",
+		"authentication.permissions.read_jobs.name",
+		"authentication.permissions.read_jobs.description",
 		PermissionScopeSystem,
 	}
 	PermissionManageJobs = &Permission{
 		"manage_jobs",
-		"authentication.permisssions.manage_jobs.name",
-		"authentication.permisssions.manage_jobs.description",
+		"authentication.permissions.manage_jobs.name",
+		"authentication.permissions.manage_jobs.description",
 		PermissionScopeSystem,
 	}
 	PermissionViewMembers = &Permission{
 		"view_members",
-		"authentication.permisssions.view_members.name",
-		"authentication.permisssions.view_members.description",
+		"authentication.permissions.view_members.name",
+		"authentication.permissions.view_members.description",
 		PermissionScopeTeam,
 	}
 	PermissionInviteGuest = &Permission{
