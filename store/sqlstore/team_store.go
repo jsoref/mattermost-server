@@ -1375,7 +1375,7 @@ func (s SqlTeamStore) AnalyticsGetTeamCountForScheme(schemeId string) (int64, er
 	}
 	count, err := s.GetReplica().SelectInt(query, args...)
 	if err != nil {
-		return 0, errors.Wrapf(err, "failed to count Teams with schemdId=%s", schemeId)
+		return 0, errors.Wrapf(err, "failed to count Teams with schemeId=%s", schemeId)
 	}
 
 	return count, nil
