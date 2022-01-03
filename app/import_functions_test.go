@@ -680,7 +680,7 @@ func TestImportImportChannel(t *testing.T) {
 
 	// Alter all the fields of that channel.
 	cTypePr := model.ChannelTypePrivate
-	data.DisplayName = ptrStr("Chaned Disp Name")
+	data.DisplayName = ptrStr("Changed Disp Name")
 	data.Type = &cTypePr
 	data.Header = ptrStr("New Header")
 	data.Purpose = ptrStr("New Purpose")
