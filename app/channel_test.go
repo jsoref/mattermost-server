@@ -1811,9 +1811,9 @@ func TestPatchChannelModerationsForChannel(t *testing.T) {
 
 	for _, tc := range testCases {
 		t.Run(tc.Name, func(t *testing.T) {
-			higherScopedPermissionsOverriden := tc.HigherScopedMemberPermissions != nil || tc.HigherScopedGuestPermissions != nil
+			higherScopedPermissionsOverridden := tc.HigherScopedMemberPermissions != nil || tc.HigherScopedGuestPermissions != nil
 			// If the test case restricts higher scoped permissions.
-			if higherScopedPermissionsOverriden {
+			if higherScopedPermissionsOverridden {
 				higherScopedGuestRoleName, higherScopedMemberRoleName, _, _ := th.App.GetTeamSchemeChannelRoles(channel.TeamId)
 				if tc.HigherScopedMemberPermissions != nil {
 					higherScopedMemberRole, err := th.App.GetRoleByName(context.Background(), higherScopedMemberRoleName)
