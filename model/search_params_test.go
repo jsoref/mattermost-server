@@ -94,17 +94,17 @@ func TestSplitWords(t *testing.T) {
 			Output: []string{"\"quoted multiple words\""},
 		},
 		{
-			Name:   "string has a mix of qouted words and non quoted words, output should contain 5 entries, quoted words should not be split",
+			Name:   "string has a mix of quoted words and non quoted words, output should contain 5 entries, quoted words should not be split",
 			Input:  "some stuff \"quoted multiple words\" more stuff",
 			Output: []string{"some", "stuff", "\"quoted multiple words\"", "more", "stuff"},
 		},
 		{
-			Name:   "string has a mix of qouted words with a - prefix and non quoted words, output should contain 5 entries, quoted words should not be split, - should be kept",
+			Name:   "string has a mix of quoted words with a - prefix and non quoted words, output should contain 5 entries, quoted words should not be split, - should be kept",
 			Input:  "some stuff -\"quoted multiple words\" more stuff",
 			Output: []string{"some", "stuff", "-\"quoted multiple words\"", "more", "stuff"},
 		},
 		{
-			Name:   "string has a mix of multiple qouted words with a - prefix and non quoted words including a # character, output should contain 5 entries, quoted words should not be split, # and - should be kept",
+			Name:   "string has a mix of multiple quoted words with a - prefix and non quoted words including a # character, output should contain 5 entries, quoted words should not be split, # and - should be kept",
 			Input:  "some \"stuff\" \"quoted multiple words\" #some \"more stuff\"",
 			Output: []string{"some", "\"stuff\"", "\"quoted multiple words\"", "#some", "\"more stuff\""},
 		},
