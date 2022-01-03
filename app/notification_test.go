@@ -2261,7 +2261,7 @@ func TestProcessText(t *testing.T) {
 				ChannelMentioned: true,
 			},
 		},
-		"Mention other pontential users or system calls": {
+		"Mention other potential users or system calls": {
 			Text:     "hello @potentialuser and @otherpotentialuser",
 			Keywords: map[string][]string{},
 			Groups:   map[string]*model.Group{"engineering": {Name: model.NewString("engineering")}, "developers": {Name: model.NewString("developers")}},
