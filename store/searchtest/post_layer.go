@@ -187,7 +187,7 @@ var searchPostStoreTests = []searchTest{
 	},
 	{
 		Name: "Should not return system messages",
-		Fn:   testSearchShouldExcludeSytemMessages,
+		Fn:   testSearchShouldExcludeSystemMessages,
 		Tags: []string{EngineAll},
 	},
 	{
@@ -1399,7 +1399,7 @@ func testSearchHashtagWithUnderscores(t *testing.T, th *SearchTestHelper) {
 	th.checkPostInSearchResults(t, p1.Id, results.Posts)
 }
 
-func testSearchShouldExcludeSytemMessages(t *testing.T, th *SearchTestHelper) {
+func testSearchShouldExcludeSystemMessages(t *testing.T, th *SearchTestHelper) {
 	_, err := th.createPost(th.User.Id, th.ChannelBasic.Id, "test system message one", "", model.PostTypeJoinChannel, 0, false)
 	require.NoError(t, err)
 	_, err = th.createPost(th.User.Id, th.ChannelBasic.Id, "test system message two", "", model.PostTypeLeaveChannel, 0, false)
