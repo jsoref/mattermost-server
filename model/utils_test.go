@@ -107,7 +107,7 @@ func TestMapJson(t *testing.T) {
 	require.Equal(t, rm["id"], "test_id", "map should be valid")
 
 	rm2 := MapFromJSON(strings.NewReader(""))
-	require.LessOrEqual(t, len(rm2), 0, "make should be ivalid")
+	require.LessOrEqual(t, len(rm2), 0, "make should be invalid")
 }
 
 func TestIsValidEmail(t *testing.T) {
