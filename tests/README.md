@@ -21,7 +21,7 @@ It is possible to manually test specific sections of any test, instead of using 
 
 There are two test plugins: `testplugin.tar.gz` and `testplugin2.tar.gz`. These are use in some integration tests in the `api4` package. Any changes to the plugin bundles require updating the corresponding signatures.
 
-First, import the public and privat development key:
+First, import the public and private development key:
 ```
 $ gpg --import ./development-public-key.gpg
 $ gpg --import ./development-private-key.asc
