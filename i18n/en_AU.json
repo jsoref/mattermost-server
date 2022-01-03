@@ -5716,11 +5716,11 @@
     "translation": "The channels of the invite must be part of the team of the invite."
   },
   {
-    "id": "api.team.invate_guests_to_channels.license.error",
+    "id": "api.team.invite_guests_to_channels.license.error",
     "translation": "Your licence does not support guest accounts"
   },
   {
-    "id": "api.team.invate_guests_to_channels.disabled.error",
+    "id": "api.team.invite_guests_to_channels.disabled.error",
     "translation": "Guest accounts are disabled"
   },
   {
