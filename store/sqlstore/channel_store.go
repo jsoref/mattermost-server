@@ -1290,7 +1290,7 @@ func (s SqlChannelStore) GetPrivateChannelsForTeam(teamId string, offset int, li
 
 	_, err = s.GetReplica().Select(&channels, query, args...)
 	if err != nil {
-		return nil, errors.Wrapf(err, "failed to find chaneld with teamId=%s", teamId)
+		return nil, errors.Wrapf(err, "failed to find channel with teamId=%s", teamId)
 	}
 	return channels, nil
 }
@@ -1317,7 +1317,7 @@ func (s SqlChannelStore) GetPublicChannelsForTeam(teamId string, offset int, lim
 	})
 
 	if err != nil {
-		return nil, errors.Wrapf(err, "failed to find chaneld with teamId=%s", teamId)
+		return nil, errors.Wrapf(err, "failed to find channel with teamId=%s", teamId)
 	}
 
 	return channels, nil
@@ -2115,7 +2115,7 @@ func (s SqlChannelStore) GetMemberCount(channelId string, allowFromCache bool) (
 			AND ChannelMembers.ChannelId = :ChannelId
 			AND Users.DeleteAt = 0`, map[string]interface{}{"ChannelId": channelId})
 	if err != nil {
-		return 0, errors.Wrapf(err, "failed to count ChanenelMembers with channelId=%s", channelId)
+		return 0, errors.Wrapf(err, "failed to count ChannelMembers with channelId=%s", channelId)
 	}
 
 	return count, nil

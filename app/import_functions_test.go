@@ -615,7 +615,7 @@ func TestImportImportChannel(t *testing.T) {
 		Team:        &teamName,
 		DisplayName: ptrStr("Display Name"),
 		Type:        &chanOpen,
-		Header:      ptrStr("Channe Header"),
+		Header:      ptrStr("Channel Header"),
 		Purpose:     ptrStr("Channel Purpose"),
 		Scheme:      &scheme1.Name,
 	}
@@ -1400,7 +1400,7 @@ func TestImportImportUser(t *testing.T) {
 		Name:        ptrStr(model.NewId()),
 		DisplayName: ptrStr("Display Name"),
 		Type:        &chanTypeOpen,
-		Header:      ptrStr("Channe Header"),
+		Header:      ptrStr("Channel Header"),
 		Purpose:     ptrStr("Channel Purpose"),
 	}
 	appErr = th.App.importChannel(th.Context, channelData, false)
