@@ -674,7 +674,7 @@ func (s SqlChannelStore) UpdateSidebarCategories(userId, teamId string, categori
 				).ToSql()
 
 			if err2 != nil {
-				return nil, nil, errors.Wrap(err2, "update_sidebar_catetories_tosql")
+				return nil, nil, errors.Wrap(err2, "update_sidebar_categories_tosql")
 			}
 
 			if _, err = transaction.Exec(query, args...); err != nil {
