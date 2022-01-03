@@ -90,7 +90,7 @@ var searchPostStoreTests = []searchTest{
 		Tags: []string{EngineAll},
 	},
 	{
-		Name: "Should be able to exclude messages that contain a serch term",
+		Name: "Should be able to exclude messages that contain a search term",
 		Fn:   testFilterMessagesWithATerm,
 		Tags: []string{EngineMySql, EnginePostgres},
 	},
@@ -152,7 +152,7 @@ var searchPostStoreTests = []searchTest{
 	},
 	{
 		Name: "Should support searching for multiple hashtags",
-		Fn:   testSearcWithMultipleHashtags,
+		Fn:   testSearchWithMultipleHashtags,
 		Tags: []string{EngineElasticSearch},
 	},
 	{
@@ -1225,7 +1225,7 @@ func testSearchHashtagWithMarkdown(t *testing.T, th *SearchTestHelper) {
 	th.checkPostInSearchResults(t, p5.Id, results.Posts)
 }
 
-func testSearcWithMultipleHashtags(t *testing.T, th *SearchTestHelper) {
+func testSearchWithMultipleHashtags(t *testing.T, th *SearchTestHelper) {
 	p1, err := th.createPost(th.User.Id, th.ChannelBasic.Id, "searching hashtag #hashtag", "#hashtwo #hashone", model.PostTypeDefault, 0, false)
 	require.NoError(t, err)
 	p2, err := th.createPost(th.User.Id, th.ChannelBasic.Id, "searching term with `#hashtag`", "#hashtwo #hashthree", model.PostTypeDefault, 0, false)
