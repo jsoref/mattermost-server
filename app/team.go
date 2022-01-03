@@ -1738,16 +1738,16 @@ func (a *App) GetTeamIdFromQuery(query url.Values) (string, *model.AppError) {
 	if tokenID != "" {
 		token, err := a.Srv().Store.Token().GetByToken(tokenID)
 		if err != nil {
-			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.singup_with_oauth.invalid_link.app_error", nil, "", http.StatusBadRequest)
+			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.signup_with_oauth.invalid_link.app_error", nil, "", http.StatusBadRequest)
 		}
 
 		if token.Type != TokenTypeTeamInvitation && token.Type != TokenTypeGuestInvitation {
-			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.singup_with_oauth.invalid_link.app_error", nil, "", http.StatusBadRequest)
+			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.signup_with_oauth.invalid_link.app_error", nil, "", http.StatusBadRequest)
 		}
 
 		if model.GetMillis()-token.CreateAt >= InvitationExpiryTime {
 			a.DeleteToken(token)
-			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.singup_with_oauth.expired_link.app_error", nil, "", http.StatusBadRequest)
+			return "", model.NewAppError("GetTeamIdFromQuery", "api.oauth.signup_with_oauth.expired_link.app_error", nil, "", http.StatusBadRequest)
 		}
 
 		tokenData := model.MapFromJSON(strings.NewReader(token.Extra))
