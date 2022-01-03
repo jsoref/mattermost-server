@@ -885,7 +885,7 @@ func TestIsValidHTTPURL(t *testing.T) {
 		},
 		{
 			"url with invalid scheme",
-			"htp://mattermost.com",
+			"http://mattermost.com",
 			false,
 		},
 		{
