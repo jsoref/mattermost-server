@@ -393,7 +393,7 @@ func TestParseSearchFlags2(t *testing.T) {
 			},
 		},
 		{
-			Name:  "string with a non-floag followed by :",
+			Name:  "string with a non-flag followed by :",
 			Input: "fruit: cherry",
 			Words: []searchWord{
 				{
