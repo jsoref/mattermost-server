@@ -667,7 +667,7 @@ func (a *App) getAddComplianceSubsectionPermissions() (permissionsMap, error) {
 		Add: permissionsComplianceWrite,
 	})
 
-	// Ancilary permissions
+	// Ancillary permissions
 	transformations = append(transformations, permissionTransformation{
 		On:  permissionExists(model.PermissionSysconsoleWriteComplianceDataRetentionPolicy.Id),
 		Add: []string{model.PermissionCreateDataRetentionJob.Id},
