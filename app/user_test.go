@@ -524,7 +524,7 @@ func TestUpdateUserEmail(t *testing.T) {
 			tokens, err = th.App.Srv().Store.Token().GetAllTokensByType(TokenTypeVerifyEmail)
 			// We verify the same conditions as the earlier function,
 			// but we also need to ensure that this is not the same token
-			// as before, which is possible if the token updation goroutine
+			// as before, which is possible if the token update goroutine
 			// hasn't yet run.
 			return err == nil && len(tokens) == 1 && tokens[0].Token != firstToken.Token
 		}, 100*time.Millisecond, 10*time.Millisecond)
