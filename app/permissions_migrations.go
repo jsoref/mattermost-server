@@ -536,7 +536,7 @@ func (a *App) getAddManageSecureConnectionsPermissionsMigration() (permissionsMa
 			Add: []string{PermissionManageSecureConnections},
 		})
 
-	// remote the decprecated permission from system admin
+	// remote the deprecated permission from system admin
 	transformations = append(transformations,
 		permissionTransformation{
 			On:     isRole(model.SystemAdminRoleId),
