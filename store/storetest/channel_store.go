@@ -516,7 +516,7 @@ func testChannelStoreGetChannelsByIds(t *testing.T, ss store.Store) {
 	t.Run("Get 2 existing channels", func(t *testing.T) {
 		r1, err := ss.Channel().GetChannelsByIds([]string{o1.Id, o2.Id}, false)
 		require.NoError(t, err, err)
-		require.Len(t, r1, 2, "invalid returned channels, exepected 2 and got "+strconv.Itoa(len(r1)))
+		require.Len(t, r1, 2, "invalid returned channels, expected 2 and got "+strconv.Itoa(len(r1)))
 		require.Equal(t, channelToJSON(t, &o1), channelToJSON(t, r1[0]))
 		require.Equal(t, channelToJSON(t, &o2), channelToJSON(t, r1[1]))
 	})
@@ -532,7 +532,7 @@ func testChannelStoreGetChannelsByIds(t *testing.T, ss store.Store) {
 	t.Run("Get 2 existing and 1 deleted channel", func(t *testing.T) {
 		r1, err := ss.Channel().GetChannelsByIds([]string{o1.Id, o2.Id, o3.Id}, true)
 		require.NoError(t, err, err)
-		require.Len(t, r1, 3, "invalid returned channels, exepected 3 and got "+strconv.Itoa(len(r1)))
+		require.Len(t, r1, 3, "invalid returned channels, expected 3 and got "+strconv.Itoa(len(r1)))
 		require.Equal(t, channelToJSON(t, &o1), channelToJSON(t, r1[0]))
 		require.Equal(t, channelToJSON(t, &o2), channelToJSON(t, r1[1]))
 		require.Equal(t, channelToJSON(t, &o3), channelToJSON(t, r1[2]))
