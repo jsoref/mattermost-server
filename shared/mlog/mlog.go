@@ -379,7 +379,7 @@ func (l *Logger) Flush() error {
 	return l.log.Logr().FlushWithTimeout(ctx)
 }
 
-// Flush forces all targets to write out any queued log records with the specfified timeout.
+// Flush forces all targets to write out any queued log records with the specified timeout.
 func (l *Logger) FlushWithTimeout(ctx context.Context) error {
 	return l.log.Logr().FlushWithTimeout(ctx)
 }
