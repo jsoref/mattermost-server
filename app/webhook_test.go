@@ -587,7 +587,7 @@ func TestTriggerOutGoingWebhookWithUsernameAndIconURL(t *testing.T) {
 		}
 	}
 
-	waitUntilWebhookResposeIsCreatedAsPost := func(channel *model.Channel, th *TestHelper, createdPost chan *model.Post) {
+	waitUntilWebhookResponseIsCreatedAsPost := func(channel *model.Channel, th *TestHelper, createdPost chan *model.Post) {
 		go func() {
 			for i := 0; i < 5; i++ {
 				time.Sleep(time.Second)
@@ -687,7 +687,7 @@ func TestTriggerOutGoingWebhookWithUsernameAndIconURL(t *testing.T) {
 
 			th.App.TriggerWebhook(th.Context, payload, hook, th.BasicPost, channel)
 
-			waitUntilWebhookResposeIsCreatedAsPost(channel, th, createdPost)
+			waitUntilWebhookResponseIsCreatedAsPost(channel, th, createdPost)
 
 			select {
 			case webhookPost := <-createdPost:
