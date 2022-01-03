@@ -905,7 +905,7 @@ func TestIsValidHTTPURL(t *testing.T) {
 		},
 		{
 			"correct url with http scheme",
-			"http://mattemost.com",
+			"http://mattermost.com",
 			true,
 		},
 		{
