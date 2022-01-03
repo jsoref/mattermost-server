@@ -646,8 +646,8 @@ func TestTriggerOutGoingWebhookWithUsernameAndIconURL(t *testing.T) {
 				EnablePostUsernameOverride: true,
 				EnablePostIconOverride:     true,
 				ExpectedUsername:           "webhookuser",
-				ExpectedIconURL:            "http://webhok/icon",
-				WebhookResponse:            &model.OutgoingWebhookResponse{Text: &webHookResponse, Username: "webhookuser", IconURL: "http://webhok/icon"},
+				ExpectedIconURL:            "http://webhook/icon",
+				WebhookResponse:            &model.OutgoingWebhookResponse{Text: &webHookResponse, Username: "webhookuser", IconURL: "http://webhook/icon"},
 			},
 		}
 		return testCasesOutgoing
