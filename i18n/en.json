@@ -7429,7 +7429,7 @@
   },
   {
     "id": "ent.migration.migratetoldap.duplicate_field",
-    "translation": "Unable to migrate AD/LDAP users with specified field. Duplicate entry detected. Please remove all duplcates and try again."
+    "translation": "Unable to migrate AD/LDAP users with specified field. Duplicate entry detected. Please remove all duplicates and try again."
   },
   {
     "id": "ent.migration.migratetoldap.user_not_found",
